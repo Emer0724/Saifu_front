@@ -65,25 +65,29 @@
 .custom-input {
     background-color: rgba(6, 20, 14, 0.6) !important;
     border: 1px solid var(--border-color) !important;
-    color: var(--text-main) !important;
+    color: var(--accent-emerald);
     border-radius: 10px;
     transition: all 0.2s ease;
 }
 
 .custom-input:focus {
     background-color: rgba(6, 20, 14, 0.8) !important;
-    border-color: var(--accent-emerald) !important;
+    border-color: var(--accent-emerald);
     box-shadow: 0 0 0 0.25rem rgba(16, 185, 129, 0.2) !important;
 }
 
 .form-floating>label {
-    color: var(--text-muted);
+    color: var(--accent-emerald) !important;
     padding: 1rem 0.75rem;
+}
+
+.custom-input~label {
+    color: var(--accent-emerald) !important;
 }
 
 .custom-input:focus~label,
 .custom-input:not(:placeholder-shown)~label {
-    color: var(--accent-emerald);
+    color: var(--accent-emerald) !important;
     transform: scale(0.85) translateY(-0.5rem) translateX(0.15rem);
     background-color: transparent !important;
 }
@@ -127,4 +131,39 @@
 
 .btn-saifu:active {
     transform: translateY(0);
+}
+
+/* Custom Checkbox */
+.form-check {
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+}
+
+.custom-checkbox {
+    background-color: rgba(6, 20, 14, 0.6) !important;
+    border: 1px solid var(--accent-emerald) !important;
+    cursor: pointer;
+    width: 1.1rem;
+    height: 1.1rem;
+    margin-left: 0 !important;
+    margin-top: 0 !important;
+}
+
+.custom-checkbox:checked {
+    background-color: var(--accent-emerald) !important;
+    border-color: var(--accent-emerald) !important;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10l3 3l6-6'/%3e%3c/svg%3e") !important;
+}
+
+.custom-checkbox:focus {
+    box-shadow: 0 0 0 0.25rem rgba(16, 185, 129, 0.25) !important;
+}
+
+.custom-checkbox-label {
+    color: var(--accent-emerald) !important;
+    font-size: 0.9rem;
+    cursor: pointer;
+    user-select: none;
+    font-weight: 500;
+    margin-left: 0.5rem;
 }

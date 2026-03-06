@@ -48,9 +48,9 @@ function App() {
           </div>
 
           <div className="d-flex justify-content-between align-items-center mb-4">
-            <div className="form-check">
-              <input className="form-check-input" type="checkbox" id="rememberMe" style={{ borderColor: 'var(--border-color)', backgroundColor: 'transparent' }} />
-              <label className="form-check-label text-muted" htmlFor="rememberMe" style={{ fontSize: '0.85rem' }}>
+            <div className="form-check d-flex align-items-center">
+              <input className="form-check-input custom-checkbox m-0" type="checkbox" id="rememberMe" />
+              <label className="form-check-label custom-checkbox-label" htmlFor="rememberMe">
                 記住我
               </label>
             </div>
