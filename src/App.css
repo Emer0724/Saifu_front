@@ -1,10 +1,130 @@
-.title{
-    font-size: 18px;
-    color: Emerald ;
+.login-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle at top right, #0a2118 0%, var(--primary-dark) 60%);
+    position: relative;
+    overflow: hidden;
 }
-.box{
-    margin: 20px;
+
+/* 背景光暈點綴 */
+.login-container::before {
+    content: '';
+    position: absolute;
+    top: -150px;
+    right: -150px;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(16, 185, 129, 0.15) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
 }
-.container{
-    
+
+.login-card {
+    background-color: rgba(15, 43, 29, 0.6);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 3rem 2.5rem;
+    width: 100%;
+    max-width: 420px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.login-card:hover {
+    box-shadow: 0 25px 50px -12px rgba(16, 185, 129, 0.1);
+}
+
+.brand-title {
+    color: var(--accent-emerald);
+    font-weight: 700;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.5px;
+}
+
+.brand-subtitle {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 2rem;
+}
+
+/* 客製化輸入框 */
+.form-floating>.form-control,
+.form-floating>.form-control-plaintext {
+    padding: 1rem 0.75rem;
+}
+
+.form-floating>.form-control {
+    height: calc(3.5rem + 2px);
+    line-height: 1.25;
+}
+
+.custom-input {
+    background-color: rgba(6, 20, 14, 0.6) !important;
+    border: 1px solid var(--border-color) !important;
+    color: var(--text-main) !important;
+    border-radius: 10px;
+    transition: all 0.2s ease;
+}
+
+.custom-input:focus {
+    background-color: rgba(6, 20, 14, 0.8) !important;
+    border-color: var(--accent-emerald) !important;
+    box-shadow: 0 0 0 0.25rem rgba(16, 185, 129, 0.2) !important;
+}
+
+.form-floating>label {
+    color: var(--text-muted);
+    padding: 1rem 0.75rem;
+}
+
+.custom-input:focus~label,
+.custom-input:not(:placeholder-shown)~label {
+    color: var(--accent-emerald);
+    transform: scale(0.85) translateY(-0.5rem) translateX(0.15rem);
+    background-color: transparent !important;
+}
+
+.form-floating .custom-input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px #06140E inset !important;
+    -webkit-text-fill-color: var(--text-main) !important;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+.forgot-password {
+    color: var(--accent-emerald);
+    font-size: 0.85rem;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.forgot-password:hover {
+    color: var(--accent-emerald-hover);
+    text-decoration: underline;
+}
+
+.btn-saifu {
+    background: linear-gradient(135deg, var(--accent-emerald) 0%, var(--accent-emerald-hover) 100%);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 0.85rem 1.5rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.btn-saifu:hover,
+.btn-saifu:focus {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px -10px rgba(16, 185, 129, 0.5);
+    color: #fff;
+}
+
+.btn-saifu:active {
+    transform: translateY(0);
 }
