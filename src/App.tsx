@@ -7,9 +7,32 @@ function App() {
   const [account, setAccount] = useState('');
   const [password, setPassword] = useState('');
 
-  const handleLogin = (e: React.FormEvent) => {
+  const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Login attempt', { account, password });
+    try {
+      const response = await fetch('http://localhost:65166/api/auth/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          account,
+          password,
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error('登入失敗');
+      }
+
+      const data = await response.json();
+      console.log('登入成功', data);
+
+      localStorage.setItem('token', data.token);
+    }
+    catch (error) {
+      console.log(error);
+    }
   };
 
   return (
