@@ -52,12 +52,12 @@
 }
 
 /* 客製化輸入框 */
-.form-floating>.form-control,
-.form-floating>.form-control-plaintext {
+:global(.form-floating) > :global(.form-control),
+:global(.form-floating) > :global(.form-control-plaintext) {
     padding: 1rem 0.75rem;
 }
 
-.form-floating>.form-control {
+:global(.form-floating) > :global(.form-control) {
     height: calc(3.5rem + 2px);
     line-height: 1.25;
 }
@@ -76,7 +76,7 @@
     box-shadow: 0 0 0 0.25rem rgba(16, 185, 129, 0.2) !important;
 }
 
-.form-floating>label {
+:global(.form-floating) > label {
     color: var(--accent-emerald) !important;
     padding: 1rem 0.75rem;
 }
@@ -92,7 +92,7 @@
     background-color: transparent !important;
 }
 
-.form-floating .custom-input:-webkit-autofill {
+:global(.form-floating) .custom-input:-webkit-autofill {
     -webkit-box-shadow: 0 0 0 1000px #06140E inset !important;
     -webkit-text-fill-color: var(--text-main) !important;
     transition: background-color 5000s ease-in-out 0s;
@@ -110,7 +110,7 @@
     text-decoration: underline;
 }
 
-.btn-saifu {
+:global(.btn-saifu) {
     background: linear-gradient(135deg, var(--accent-emerald) 0%, var(--accent-emerald-hover) 100%);
     color: #fff;
     border: none;
@@ -122,19 +122,19 @@
     width: 100%;
 }
 
-.btn-saifu:hover,
-.btn-saifu:focus {
+:global(.btn-saifu):hover,
+:global(.btn-saifu):focus {
     transform: translateY(-2px);
     box-shadow: 0 10px 20px -10px rgba(16, 185, 129, 0.5);
     color: #fff;
 }
 
-.btn-saifu:active {
+:global(.btn-saifu):active {
     transform: translateY(0);
 }
 
 /* Custom Checkbox */
-.form-check {
+:global(.form-check) {
     padding-left: 0 !important;
     margin-left: 0 !important;
 }

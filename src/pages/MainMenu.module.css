@@ -1,0 +1,39 @@
+.main-menu-container {
+  min-height: 100vh;
+  padding: 40px 20px;
+  background-color: #f8f9fa;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.brand-title {
+  color: #333;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.menu-card {
+  border-radius: 16px;
+  background-color: white;
+}
+
+.menu-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08) !important;
+}
+
+.icon-wrapper {
+  background-color: #f0f4f8;
+  height: 64px;
+  width: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+}
+
+.logout-btn {
+  border-radius: 8px;
+  padding: 8px 24px;
+  font-weight: 500;
+}
