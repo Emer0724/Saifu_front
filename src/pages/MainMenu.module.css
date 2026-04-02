@@ -7,7 +7,7 @@
 }
 
 .brand-title {
-  color: #333;
+  color: var(--accent-emerald);
   font-weight: 800;
   letter-spacing: -0.5px;
 }

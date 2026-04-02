@@ -1,7 +1,9 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import styles from './MainMenu.module.css';
 
 const MainMenu: React.FC = () => {
+  const navigate = useNavigate();
   const menuItems = [
     { id: 'records', title: '記帳', icon: '📝', description: '記錄您的每日收支' },
     { id: 'reports', title: '報表', icon: '📊', description: '查看您的財務狀況' },
@@ -12,6 +14,10 @@ const MainMenu: React.FC = () => {
   const handleLogout = () => {
     localStorage.removeItem('token');
     window.location.href = '/';
+  };
+
+  const handleNavigate = (pageId: string) => {
+    navigate(`/${pageId}`);
   };
 
   return (
@@ -31,7 +37,7 @@ const MainMenu: React.FC = () => {
           <div key={item.id} className="col-12 col-md-6">
             <div 
               className={`card h-100 shadow-sm border-0 ${styles['menu-card']}`} 
-              onClick={() => console.log(`Navigate to ${item.id}`)}
+              onClick={() => handleNavigate(item.id)}
               style={{ cursor: 'pointer', transition: 'transform 0.2s, box-shadow 0.2s' }}
             >
               <div className="card-body p-4 d-flex align-items-center">

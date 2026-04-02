@@ -1,0 +1,92 @@
+.records-container {
+  min-height: 100vh;
+  padding: 20px;
+  background-color: var(--primary-dark);
+}
+
+.brand-title {
+  color: var(--accent-emerald);
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.record-form-card {
+  background-color: var(--secondary-dark);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+}
+
+.type-btn {
+  border-radius: 8px;
+  padding: 12px;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.type-btn:hover {
+  opacity: 0.9;
+}
+
+.category-btn {
+  border-radius: 12px;
+  padding: 12px 8px;
+  transition: all 0.2s;
+  background-color: var(--secondary-dark);
+  color: var(--text-muted);
+  border-color: var(--border-color);
+}
+
+.category-btn:hover {
+  background-color: rgba(16, 185, 129, 0.1);
+  color: var(--accent-emerald);
+  border-color: var(--accent-emerald);
+}
+
+.category-btn.active {
+  background-color: var(--accent-emerald);
+  color: white;
+  border-color: var(--accent-emerald);
+}
+
+.hamburger-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  padding: 8px;
+}
+
+.hamburger-btn:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+.toggler-icon {
+  display: inline-block;
+  width: 1.5em;
+  height: 1.5em;
+  vertical-align: middle;
+  background-image: var(--bs-navbar-toggler-icon-bg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+}
+
+.dropdown-menu {
+  background-color: var(--secondary-dark);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  min-width: 100px;
+}
+
+.dropdown-menu button {
+  font-size: 0.875rem;
+  padding: 8px 16px;
+  text-align: left;
+  border-radius: 4px;
+}
+
+.dropdown-menu button:hover {
+  background-color: rgba(16, 185, 129, 0.1);
+  color: var(--accent-emerald);
+}
