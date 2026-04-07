@@ -42,51 +42,13 @@
   border-color: var(--accent-emerald);
 }
 
-.category-btn.active {
-  background-color: var(--accent-emerald);
-  color: white;
-  border-color: var(--accent-emerald);
-}
-
-.hamburger-btn {
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  color: white;
-  padding: 8px;
-}
-
-.hamburger-btn:hover {
-  background-color: rgba(255, 255, 255, 0.2);
-  color: white;
-}
-
-.toggler-icon {
-  display: inline-block;
-  width: 1.5em;
-  height: 1.5em;
-  vertical-align: middle;
-  background-image: var(--bs-navbar-toggler-icon-bg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 100%;
-}
-
-.dropdown-menu {
-  background-color: var(--secondary-dark);
-  border: 1px solid var(--border-color);
+.add-btn {
   border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  min-width: 100px;
+  font-weight: 600;
+  transition: all 0.2s;
 }
 
-.dropdown-menu button {
-  font-size: 0.875rem;
-  padding: 8px 16px;
-  text-align: left;
-  border-radius: 4px;
-}
-
-.dropdown-menu button:hover {
-  background-color: rgba(16, 185, 129, 0.1);
-  color: var(--accent-emerald);
+.add-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
